@@ -9,11 +9,19 @@ const TrustedSection = () => {
         </p>
         {/* Logos Section */}
         <div className="flex justify-center items-center md:gap-8 gap-2 mb-20">
-          <img src="/GoogleImg.png" alt="Google" className="lg:h-8 md:h-6 h-3" />
+          <img
+            src="/GoogleImg.png"
+            alt="Google"
+            className="lg:h-8 md:h-6 h-3"
+          />
           <img src="/NaverImg.svg" alt="Naver" className="lg:h-8 md:h-6 h-3" />
           <img src="/LotteImg.svg" alt="Lotte" className="lg:h-8 md:h-6 h-3" />
           <img src="/SnykImg.svg" alt="Snyk" className="lg:h-8 md:h-6 h-3" />
-          <img src="/ComplyImg.svg" alt="ComplyAdvantage" className="lg:h-8 md:h-6 h-3" />
+          <img
+            src="/ComplyImg.svg"
+            alt="ComplyAdvantage"
+            className="lg:h-8 md:h-6 h-3"
+          />
           <img src="/UIImg.svg" alt="UiPath" className="lg:h-8 md:h-6 h-3" />
         </div>
 
@@ -21,7 +29,7 @@ const TrustedSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Section */}
           <motion.div
-            className="space-y-6 lg:w-3/4"
+            className="space-y-6 lg:w-3/4 order-2 lg:order-1"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -73,7 +81,7 @@ const TrustedSection = () => {
 
           {/* Right Section */}
           <motion.div
-            className="relative"
+            className="relative order-1 lg:order-2"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
