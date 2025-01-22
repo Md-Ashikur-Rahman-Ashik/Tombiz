@@ -9,7 +9,7 @@ const Navbar = () => {
       <div className="container mx-auto bg-white rounded-[20px] px-6 py-2 md:px-10 lg:px-20">
         <div className="flex justify-center gap-20 items-center">
           {/* Logo */}
-          <div className="text-[30px] font-bold font-plus-jakarta text-[#08344E] flex items-center gap-[10px]">
+          <div className="text-[30px] font-bold text-[#08344E] flex items-center gap-[10px]">
             <img
               src="/TomBizLogo.svg"
               alt="TomBiz Logo"
