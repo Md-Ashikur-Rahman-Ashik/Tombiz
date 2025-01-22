@@ -39,11 +39,11 @@ const ServicesSection = () => {
         {services.map((service, index) => (
           <div
             key={service.id}
-            className={`relative border-2 rounded-lg p-6 ${
-              index === 1 ? "border-green-500" : "border-transparent"
+            className={`relative py-20 border-2 p-6 ${
+              index === 1 ? "border-[#93FF61] border-[5px] rounded-[20px]" : "border-transparent rounded-lg"
             } transition-transform duration-300 hover:scale-105`}
           >
-            <div className="absolute -top-4 left-4 bg-green-200 text-green-700 font-semibold text-sm rounded-full px-4 py-2">
+            <div className="absolute rounded-tl-[20px] rounded-br-[20px] -top-1 left-0 bg-[#93FF61] text-[#08344E] font-semibold text-[22px] px-4 py-2">
               {service.id}
             </div>
             <img
