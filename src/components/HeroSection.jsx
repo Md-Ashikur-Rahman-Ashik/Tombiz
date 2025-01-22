@@ -42,7 +42,7 @@ const HeroSection = () => {
               Business Consulting
             </span>
           </p>
-          <h1 className="text-[88.762px] sm:text-5xl flex flex-col font-semibold text-[#08344E]">
+          <h1 className="md:text-[88.762px] text-5xl flex flex-col font-semibold text-[#08344E]">
             Transform Your <span>Business Potential</span>
           </h1>
         </div>
@@ -54,18 +54,18 @@ const HeroSection = () => {
             <img
               src="/HeroSectionImg.jpeg" // Replace with the actual path to your image
               alt="Business Consulting"
-              className="w-full object-cover"
+              className="w-full object-cover md:h-auto h-screen"
             />
             {/* Overlay */}
-            <div className="absolute inset-0 flex items-end p-6 bg-gradient-to-t from-black/60 to-transparent">
-              <div className="flex justify-between">
+            <div className="absolute  inset-0 flex items-end p-2 md:p-6 bg-gradient-to-t from-black/60 to-transparent">
+              <div className="flex md:flex-row flex-col md:justify-between justify-end">
                 <button className="flex items-center px-4 py-2 text-white rounded-md hover:bg-black/80 transition">
                   <span className="mr-2">
                     <AiOutlinePlayCircle className="w-[48px] h-[48px]" />
                   </span>{" "}
                   <span className="text-[15px] font-semibold">Demo Video</span>
                 </button>
-                <p className="text-[15px] font-medium w-1/3 text-white mt-3">
+                <p className="text-[15px] font-medium md:w-1/3 text-white mt-3">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Suspendisse varius enim in eros elementum tristique.
                 </p>
