@@ -5,11 +5,16 @@ export default {
     extend: {
       animation: {
         scroll: "scroll 10s linear infinite",
+        floating: "floating 6s ease-in-out infinite",
       },
       keyframes: {
         scroll: {
           "0%": { transform: "translateX(100%)" },
           "100%": { transform: "translateX(-100%)" },
+        },
+        floating: {
+          "0%, 100%": { transform: "translateY(-5px)" },
+          "50%": { transform: "translateY(5px)" },
         },
       },
     },
