@@ -6,10 +6,10 @@ const ProvenResults = () => {
       {/* Central Content */}
       <div className="relative flex flex-col items-center text-center px-4">
         {/* Title and Subtitle */}
-        <h2 className="text-2xl md:text-3xl lg:text-[40px] font-bold text-[#08344E] w-1/3">
+        <h2 className="text-2xl md:text-3xl lg:text-[40px] font-bold text-[#08344E] md:w-1/3">
           Proven Results by thousands People
         </h2>
-        <p className="text-[#72777D] w-1/3 mt-5 text-[15px] font-medium">
+        <p className="text-[#72777D] md:w-1/3 mt-5 text-[15px] font-medium">
           Our data handling practices, systems, and processes have been
           independently audited and certified. Our data handling practices,
           systems, and processes have
@@ -36,7 +36,7 @@ const ProvenResults = () => {
 
           {/* Top-Center Image */}
           <div
-            className="absolute -top-40 left-20 transform -translate-x-1/2 w-24 h-24 md:w-32 md:h-32 bg-gray-100 rounded-lg shadow-lg transition hover:scale-105 duration-300 animate-fadeInDown"
+            className="absolute md:-top-40 -top-28 md:left-20 left-14 transform -translate-x-1/2 w-24 h-24 md:w-32 md:h-32 bg-gray-100 rounded-lg shadow-lg transition hover:scale-105 duration-300 animate-fadeInDown"
             style={{
               backgroundImage: "url('/ProvenImg2.jpeg')",
               backgroundSize: "cover",
@@ -46,7 +46,7 @@ const ProvenResults = () => {
 
           {/* Top-Right Image */}
           <div
-            className="absolute -top-52 right-36 w-24 h-24 md:w-32 md:h-32 bg-gray-100 rounded-lg shadow-lg transition hover:scale-105 duration-300 animate-fadeInUp"
+            className="absolute lg:-top-52 -top-40 lg:right-36 md:right-20 right-28 w-24 h-24 md:w-32 md:h-32 bg-gray-100 rounded-lg shadow-lg transition hover:scale-105 duration-300 animate-fadeInUp"
             style={{
               backgroundImage: "url('/ProvenImg3.jpeg')",
               backgroundSize: "cover",
@@ -66,7 +66,7 @@ const ProvenResults = () => {
 
           {/* Middle-Right Image */}
           <div
-            className="absolute -left-10 top-64 transform -translate-y-1/2 w-24 h-24 md:w-32 md:h-32 bg-gray-100 rounded-lg shadow-lg transition hover:scale-105 duration-300 animate-fadeInUp"
+            className="absolute lg:-left-10 md:left-0 left-4 md:top-64 top-80 transform -translate-y-1/2 w-24 h-24 md:w-32 md:h-32 bg-gray-100 rounded-lg shadow-lg transition hover:scale-105 duration-300 animate-fadeInUp"
             style={{
               backgroundImage: "url('/ConsultingTeam.jpeg')",
               backgroundSize: "cover",
@@ -76,7 +76,7 @@ const ProvenResults = () => {
 
           {/* Bottom-Left Image */}
           <div
-            className="absolute -top-48 left-96 w-24 h-24 md:w-32 md:h-32 bg-gray-100 rounded-lg shadow-lg transition hover:scale-105 duration-300 animate-fadeInDown"
+            className="absolute lg:-top-48 -top-36 lg:left-96 md:left-80 left-52 w-24 h-24 md:w-32 md:h-32 bg-gray-100 rounded-lg shadow-lg transition hover:scale-105 duration-300 animate-fadeInDown"
             style={{
               backgroundImage: "url('/FinancialManagementImg.jpeg')",
               backgroundSize: "cover",
@@ -86,7 +86,7 @@ const ProvenResults = () => {
 
           {/* Bottom-Center Image */}
           <div
-            className="absolute bottom-0 -right-10 transform -translate-x-1/2 w-24 h-24 md:w-32 md:h-32 bg-gray-100 rounded-lg shadow-lg transition hover:scale-105 duration-300 animate-fadeInUp"
+            className="absolute md:bottom-0 -bottom-28 -right-10 transform -translate-x-1/2 w-24 h-24 md:w-32 md:h-32 bg-gray-100 rounded-lg shadow-lg transition hover:scale-105 duration-300 animate-fadeInUp"
             style={{
               backgroundImage: "url('/SavingImg.jpeg')",
               backgroundSize: "cover",
