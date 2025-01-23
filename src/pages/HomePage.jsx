@@ -1,3 +1,4 @@
+import BlogSection from "../components/BlogSection";
 import ChooseUs from "../components/ChooseUs";
 import HeroSection from "../components/HeroSection";
 import ProvenResults from "../components/ProvenResults";
@@ -16,6 +17,7 @@ const HomePage = () => {
       <ProvenResults />
       <SuccessSection />
       <ReviewSection />
+      <BlogSection />
     </div>
   );
 };
