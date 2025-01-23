@@ -26,7 +26,7 @@ const ProvenResults = () => {
         <div className="absolute inset-0">
           {/* Top-Left Image */}
           <div
-            className="absolute -bottom-72 left-20 w-24 h-24 md:w-32 md:h-32 bg-gray-100 rounded-lg shadow-lg transform transition hover:scale-105 duration-300 animate-fadeInUp"
+            className="absolute md:block hidden -bottom-72 left-20 w-24 h-24 md:w-32 md:h-32 bg-gray-100 rounded-lg shadow-lg transform transition hover:scale-105 duration-300 animate-fadeInUp"
             style={{
               backgroundImage: "url('/ProvenImg1.jpeg')", // Replace with actual image URL
               backgroundSize: "cover",
@@ -56,7 +56,7 @@ const ProvenResults = () => {
 
           {/* Middle-Left Image */}
           <div
-            className="absolute right-5 -bottom-80 transform -translate-y-1/2 w-24 h-24 md:w-32 md:h-32 bg-gray-100 rounded-lg shadow-lg transition hover:scale-105 duration-300 animate-fadeInDown"
+            className="absolute md:block hidden right-5 -bottom-80 transform -translate-y-1/2 w-24 h-24 md:w-32 md:h-32 bg-gray-100 rounded-lg shadow-lg transition hover:scale-105 duration-300 animate-fadeInDown"
             style={{
               backgroundImage: "url('/BusinessPlannerImg.jpeg')",
               backgroundSize: "cover",
@@ -66,7 +66,7 @@ const ProvenResults = () => {
 
           {/* Middle-Right Image */}
           <div
-            className="absolute lg:-left-10 md:left-0 left-4 md:top-64 top-80 transform -translate-y-1/2 w-24 h-24 md:w-32 md:h-32 bg-gray-100 rounded-lg shadow-lg transition hover:scale-105 duration-300 animate-fadeInUp"
+            className="absolute md:block hidden lg:-left-10 md:left-0 left-4 md:top-64 top-80 transform -translate-y-1/2 w-24 h-24 md:w-32 md:h-32 bg-gray-100 rounded-lg shadow-lg transition hover:scale-105 duration-300 animate-fadeInUp"
             style={{
               backgroundImage: "url('/ConsultingTeam.jpeg')",
               backgroundSize: "cover",
@@ -86,7 +86,7 @@ const ProvenResults = () => {
 
           {/* Bottom-Center Image */}
           <div
-            className="absolute md:bottom-0 -bottom-28 -right-10 transform -translate-x-1/2 w-24 h-24 md:w-32 md:h-32 bg-gray-100 rounded-lg shadow-lg transition hover:scale-105 duration-300 animate-fadeInUp"
+            className="absolute md:block hidden md:bottom-0 -bottom-28 -right-10 transform -translate-x-1/2 w-24 h-24 md:w-32 md:h-32 bg-gray-100 rounded-lg shadow-lg transition hover:scale-105 duration-300 animate-fadeInUp"
             style={{
               backgroundImage: "url('/SavingImg.jpeg')",
               backgroundSize: "cover",
