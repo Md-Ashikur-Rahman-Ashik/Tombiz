@@ -86,7 +86,7 @@ const ProvenResults = () => {
 
           {/* Bottom-Center Image */}
           <div
-            className="absolute md:block hidden md:bottom-0 -bottom-28 -right-10 transform -translate-x-1/2 w-24 h-24 md:w-32 md:h-32 bg-gray-100 rounded-lg shadow-lg transition hover:scale-105 duration-300 animate-fadeInUp"
+            className="absolute md:block hidden md:bottom-0 -bottom-28 lg:-right-16 -right-1 transform -translate-x-1/2 w-24 h-24 md:w-32 md:h-32 bg-gray-100 rounded-lg shadow-lg transition hover:scale-105 duration-300 animate-fadeInUp"
             style={{
               backgroundImage: "url('/SavingImg.jpeg')",
               backgroundSize: "cover",
