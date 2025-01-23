@@ -1,3 +1,5 @@
+import { FaArrowRight } from "react-icons/fa";
+
 const BlogSection = () => {
   const blogs = [
     {
@@ -22,13 +24,15 @@ const BlogSection = () => {
 
   return (
     <section className="container mx-auto mt-10 py-12 px-4 lg:px-20">
-      <div className="text-center mb-10">
-        <h2 className="text-lg font-medium text-blue-500 uppercase">
-          Blogs and News
+      <div className="text-center mb-20">
+        <h2 className="uppercase font-bold text-[#08344E] mb-6">
+          <span className="border text-[11.28px] py-[5px] px-[20px] rounded-[20px]">
+            blogs and news
+          </span>
         </h2>
-        <h3 className="text-4xl font-bold">
-          Recent <span className="text-blue-500">Blogs</span> And{" "}
-          <span className="text-blue-500">News</span>
+        <h3 className="md:text-[40px] text-2xl text-[#0C0C0E] font-bold">
+          Recent <span className="text-[#08344E]">Blogs </span>
+          And News
         </h3>
       </div>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -43,30 +47,18 @@ const BlogSection = () => {
               className="w-full h-52 object-cover"
             />
             <div className="p-6">
-              <p className="text-sm text-gray-500">{blog.date}</p>
-              <h4 className="text-lg font-semibold text-gray-900 mt-2">
+              <p className="text-[11.28px] uppercase font-bold text-[#72777D]">
+                {blog.date}
+              </p>
+              <h4 className="text-[22px] font-semibold text-[#08344E] mt-2">
                 {blog.title}
               </h4>
-              <a
-                href="#"
-                className="inline-flex items-center text-blue-500 font-medium mt-4 hover:underline"
+              <button
+                className="inline-flex gap-2 items-center text-[15px] text-[#08344E] font-semibold mt-4 hover:underline"
               >
                 Read More
-                <svg
-                  className="ml-2 w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M5 12h14m-7-7l7 7-7 7"
-                  ></path>
-                </svg>
-              </a>
+                <FaArrowRight className="text-green-300" />
+              </button>
             </div>
           </div>
         ))}
