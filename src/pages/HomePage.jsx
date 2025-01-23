@@ -1,5 +1,6 @@
 import BlogSection from "../components/BlogSection";
 import ChooseUs from "../components/ChooseUs";
+import ConsultationSection from "../components/ConsultationSection";
 import HeroSection from "../components/HeroSection";
 import ProvenResults from "../components/ProvenResults";
 import ReviewSection from "../components/ReviewSection";
@@ -18,6 +19,7 @@ const HomePage = () => {
       <SuccessSection />
       <ReviewSection />
       <BlogSection />
+      <ConsultationSection />
     </div>
   );
 };
