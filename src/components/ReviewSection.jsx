@@ -1,3 +1,5 @@
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+
 const ReviewSection = () => {
   return (
     <div className="bg-[#F8FDFE]">
@@ -24,14 +26,14 @@ const ReviewSection = () => {
             <span className="text-gray-400 text-xl">★</span>
           </div>
           <div className="flex justify-between">
-            <button className="shadow-md hover:shadow-lg">
-              <span className="text-gray-600">←</span>
+            <button className="-mt-20">
+              <FaArrowLeft className="text-gray-600" />
             </button>
-            <button className="shadow-md hover:shadow-lg">
-              <span className="text-gray-600">→</span>
+            <button className="-mt-20">
+              <FaArrowRight className="text-gray-600" />
             </button>
           </div>
-          <p className="text-gray-700 text-base max-w-3xl mx-auto">
+          <p className="text-[#08344E] md:text-[35px] text-2xl font-medium leading-10 mx-auto">
             “Financial planners help people to gain knowledge about how to
             invest and save their money in the most efficient way ever. Many
             people all across the Financial know.”
