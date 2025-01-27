@@ -1,4 +1,6 @@
 import { FaArrowRight } from "react-icons/fa";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const BlogSection = () => {
   const blogs = [
@@ -22,8 +24,17 @@ const BlogSection = () => {
     },
   ];
 
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { amount: 0.5, once: false });
+
   return (
-    <section className="container mx-auto mt-10 py-12 px-4 lg:px-20">
+    <motion.section
+      ref={sectionRef}
+      className="container mx-auto mt-10 py-12 px-4 lg:px-20"
+      initial={{ opacity: 0, y: 50 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 1.5, ease: "easeOut" }}
+    >
       <div className="text-center mb-20">
         <h2 className="uppercase font-bold text-[#08344E] mb-6">
           <span className="border text-[11.28px] py-[5px] px-[20px] rounded-[20px]">
@@ -37,9 +48,12 @@ const BlogSection = () => {
       </div>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {blogs.map((blog) => (
-          <div
+          <motion.div
             key={blog.id}
             className="bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl"
+            initial={{ opacity: 0, y: 50 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 1.2, ease: "easeOut", delay: blog.id * 0.2 }}
           >
             <img
               src={blog.image}
@@ -53,17 +67,15 @@ const BlogSection = () => {
               <h4 className="text-[22px] font-semibold text-[#08344E] mt-2">
                 {blog.title}
               </h4>
-              <button
-                className="inline-flex gap-2 items-center text-[15px] text-[#08344E] font-semibold mt-4 hover:underline"
-              >
+              <button className="inline-flex gap-2 items-center text-[15px] text-[#08344E] font-semibold mt-4 hover:underline">
                 Read More
                 <FaArrowRight className="text-green-300" />
               </button>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 };
 
