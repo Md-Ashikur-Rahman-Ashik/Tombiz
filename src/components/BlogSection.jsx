@@ -1,6 +1,6 @@
 import { FaArrowRight } from "react-icons/fa";
-import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 const BlogSection = () => {
   const blogs = [
@@ -25,15 +25,15 @@ const BlogSection = () => {
   ];
 
   const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { amount: 0.5, once: false });
+  const isInView = useInView(sectionRef, { once: false });
 
   return (
     <motion.section
       ref={sectionRef}
       className="container mx-auto mt-10 py-12 px-4 lg:px-20"
-      initial={{ opacity: 0, y: 50 }}
-      animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 1.5, ease: "easeOut" }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: isInView ? 1 : 0 }}
+      transition={{ duration: 1, ease: "easeInOut" }} // Adjust duration for noticeable effect
     >
       <div className="text-center mb-20">
         <h2 className="uppercase font-bold text-[#08344E] mb-6">
@@ -48,12 +48,9 @@ const BlogSection = () => {
       </div>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {blogs.map((blog) => (
-          <motion.div
+          <div
             key={blog.id}
             className="bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl"
-            initial={{ opacity: 0, y: 50 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 1.2, ease: "easeOut", delay: blog.id * 0.2 }}
           >
             <img
               src={blog.image}
@@ -72,7 +69,7 @@ const BlogSection = () => {
                 <FaArrowRight className="text-green-300" />
               </button>
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
     </motion.section>
