@@ -9,13 +9,13 @@ const ChooseUs = () => {
   return (
     <section
       ref={sectionRef}
-      className="bg-[#f5fcfc] px-6 py-12 flex lg:flex-row flex-col-reverse lg:gap-8 lg:items-center lg:justify-between lg:px-16 lg:py-20"
+      className="bg-[#f5fcfc] px-6 py-12 flex lg:flex-row flex-col-reverse lg:gap-8 lg:items-center lg:justify-between lg:px-16 lg:py-20 overflow-hidden"
     >
       {/* Left Content */}
       <motion.div
         className="lg:w-[40%]"
         initial={{ opacity: 0, x: -50 }}
-        animate={isInView ? { opacity: 1, x: 0 } : {}}
+        animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 0 }}
         transition={{
           duration: 1.2,
           ease: "easeOut",
@@ -47,7 +47,7 @@ const ChooseUs = () => {
       <motion.div
         className="relative mb-10 lg:mt-0 lg:max-w-[66%] flex items-center justify-center"
         initial={{ opacity: 0, x: 50 }}
-        animate={isInView ? { opacity: 1, x: 0 } : {}}
+        animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 0 }}
         transition={{
           duration: 1.2,
           ease: "easeOut",
