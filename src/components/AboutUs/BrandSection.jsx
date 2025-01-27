@@ -20,24 +20,50 @@ const BrandSection = () => {
         <div>
           <img src="/EEETWellLogo.png" alt="EEETWell Logo" />
         </div>
-        <div className="col-span-2">
+        <div className="col-span-2 flex justify-center">
           <img src="/LelandLogo.png" className="opacity-25" alt="Leland Logo" />
         </div>
-        <div className="text-gray-400 text-center">Google</div>
-        <div className="text-gray-800 text-center font-semibold">Microsoft</div>
-        <div className="text-gray-800 text-center font-semibold">NordVPN</div>
-        <div className="text-gray-800 text-center font-semibold">ROKT</div>
-        <div className="text-gray-800 text-center font-semibold">
-          The Guardian
+        <div>
+          <img
+            src="/GoogleLogo.png"
+            className="opacity-25 w-[123px] h-[48px]"
+            alt="Google Logo"
+          />
         </div>
-        <div className="text-gray-400 text-center">Trivago</div>
-        <div className="text-gray-400 text-center">Helio</div>
-        <div className="text-gray-800 text-center font-semibold">Makelog</div>
-        <div className="text-gray-800 text-center font-semibold">
-          Kill Cliff
+        <div>
+          <img src="/MicrosoftLogo.png" alt="Microsoft Logo" />
         </div>
-        <div className="text-gray-800 text-center font-semibold">Helium</div>
-        <div className="text-gray-400 text-center">CALA</div>
+        <div>
+          <img src="/NordVPNLogo.png" alt="NordVPN Logo" />
+        </div>
+        <div>
+          <img src="/RoktLogo.png" alt="ROKT Logo" />
+        </div>
+        <div>
+          <img src="/GuardianLogo.png" alt="Guardian Logo" />
+        </div>
+        <div>
+          <img
+            src="/TrivagoLogo.png"
+            className="opacity-25"
+            alt="Trivago Logo"
+          />
+        </div>
+        <div>
+          <img src="/HelioLogo.png" className="opacity-25" alt="Helio Logo" />
+        </div>
+        <div>
+          <img src="/MakeLogLogo.png" alt="MakeLog Logo" />
+        </div>
+        <div>
+          <img src="/KillCliffLogo.png" alt="Kill Cliff Logo" />
+        </div>
+        <div>
+          <img src="/HeliumLogo.png" alt="Helium Logo" />
+        </div>
+        <div className="col-span-2 flex justify-center">
+          <img src="/CalaLogo.png" className="opacity-25" alt="Cala Logo" />
+        </div>
       </div>
     </div>
   );
