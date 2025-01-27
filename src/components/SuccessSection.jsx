@@ -1,5 +1,6 @@
-import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const SuccessStories = () => {
   // Array to hold image data
@@ -44,20 +45,29 @@ const SuccessStories = () => {
 
   // Ref to detect when the section is in view
   const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { amount: 0.5, once: false });
+
+  // Intersection observer to track visibility
+  const { ref: inViewRef, inView } = useInView({
+    triggerOnce: false, // Re-trigger animation every time it comes into view
+    threshold: 0.2, // Trigger when 20% of the section is visible
+  });
+
+  // Combine refs for intersection observer and section reference
+  const setRefs = (node) => {
+    sectionRef.current = node;
+    inViewRef(node);
+  };
 
   return (
-    <section
-      ref={sectionRef}
+    <motion.section
+      ref={setRefs}
       className="container mx-auto lg:mt-40 md:mt-60 px-4 py-8 sm:px-6 lg:px-8"
+      initial={{ opacity: 0 }}
+      animate={inView ? { opacity: 1 } : { opacity: 0 }}
+      transition={{ duration: 1, ease: "easeInOut" }}
     >
       {/* Heading Section */}
-      <motion.div
-        className="text-center mb-8"
-        initial={{ opacity: 0, y: 50 }}
-        animate={isInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 1.2, ease: "easeOut" }}
-      >
+      <div className="text-center mb-8">
         <h2 className="uppercase font-bold text-[#08344E] mb-6">
           <span className="border text-[11.28px] py-[5px] px-[20px] rounded-[20px]">
             gallery
@@ -66,15 +76,10 @@ const SuccessStories = () => {
         <h2 className="md:text-[40px] lg:w-1/3 mx-auto lg:leading-10 font-bold text-2xl">
           Success Stories That Speak Volumes
         </h2>
-      </motion.div>
+      </div>
 
       {/* Image Grid */}
-      <motion.div
-        className="grid gap-4 grid-cols-2 md:grid-cols-3 auto-rows-[200px] md:auto-rows-[300px]"
-        initial={{ opacity: 0 }}
-        animate={isInView ? { opacity: 1 } : {}}
-        transition={{ duration: 1.5, ease: "easeOut" }}
-      >
+      <div className="grid gap-4 grid-cols-2 md:grid-cols-3 auto-rows-[200px] md:auto-rows-[300px]">
         {/* Render Images */}
         {images.map((image, index) => (
           <div
@@ -90,8 +95,8 @@ const SuccessStories = () => {
             />
           </div>
         ))}
-      </motion.div>
-    </section>
+      </div>
+    </motion.section>
   );
 };
 
