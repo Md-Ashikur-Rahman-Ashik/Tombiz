@@ -1,26 +1,21 @@
-import { MdArrowOutward } from "react-icons/md";
-import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { MdArrowOutward } from "react-icons/md";
 
 const ChooseUs = () => {
   const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { amount: 0.5, once: false });
+  const isInView = useInView(sectionRef, { triggerOnce: false, threshold: 0.2 });
 
   return (
-    <section
+    <motion.section
       ref={sectionRef}
+      initial={{ opacity: 0, y: 50 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.8, ease: "easeOut" }}
       className="bg-[#f5fcfc] px-6 py-12 flex lg:flex-row flex-col-reverse lg:gap-8 lg:items-center lg:justify-between lg:px-16 lg:py-20 overflow-hidden"
     >
       {/* Left Content */}
-      <motion.div
-        className="lg:w-[40%]"
-        initial={{ opacity: 0, x: -50 }}
-        animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 0 }}
-        transition={{
-          duration: 1.2,
-          ease: "easeOut",
-        }}
-      >
+      <div className="lg:w-[40%]">
         <h2 className="uppercase font-bold text-[#08344E] mb-6">
           <span className="border text-[11.28px] py-[5px] px-[20px] rounded-[20px]">
             why choose us
@@ -41,18 +36,10 @@ const ChooseUs = () => {
         <button className="mt-6 text-[15px] font-semibold inline-flex gap-2 items-center rounded-full bg-[#93FF61] px-6 py-3 text-[#08344E] hover:bg-green-600 hover:text-white transition duration-300 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2">
           Learn More <MdArrowOutward className="text-lg" />
         </button>
-      </motion.div>
+      </div>
 
       {/* Right Content */}
-      <motion.div
-        className="relative mb-10 lg:mt-0 lg:max-w-[66%] flex items-center justify-center"
-        initial={{ opacity: 0, x: 50 }}
-        animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 0 }}
-        transition={{
-          duration: 1.2,
-          ease: "easeOut",
-        }}
-      >
+      <div className="relative mb-10 lg:mt-0 lg:max-w-[66%] flex items-center justify-center">
         <div className="flex max-w-full gap-4">
           <img
             src="/SavingImg.jpeg"
@@ -71,8 +58,8 @@ const ChooseUs = () => {
             Client <span>Review</span>
           </p>
         </div>
-      </motion.div>
-    </section>
+      </div>
+    </motion.section>
   );
 };
 
