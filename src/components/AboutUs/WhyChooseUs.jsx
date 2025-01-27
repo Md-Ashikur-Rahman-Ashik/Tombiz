@@ -2,7 +2,7 @@ import { MdArrowOutward } from "react-icons/md";
 
 const WhyChooseUs = () => {
   return (
-    <section className="bg-gradient-to-b from-[#f0fdfa] to-[#e6f7f5] px-6 py-16 md:px-12 lg:px-20">
+    <section className="bg-gradient-to-b from-[#f0fdfa] to-[#e6f7f5] px-6 py-16 md:px-12 lg:px-20 mt-20">
       <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         {/* Text Section */}
         <div className="lg:w-[70%]">
