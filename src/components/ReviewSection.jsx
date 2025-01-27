@@ -1,9 +1,21 @@
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const ReviewSection = () => {
+  // Ref to detect when the section is in view
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { amount: 0.5, once: false });
+
   return (
     <div className="bg-[#F8FDFE]">
-      <div className="mt-10 container mx-auto flex flex-col items-center justify-center py-16 px-6 lg:px-32">
+      <motion.div
+        ref={sectionRef}
+        className="mt-10 container mx-auto flex flex-col items-center justify-center py-16 px-6 lg:px-32"
+        initial={{ opacity: 0, y: 50 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 1.5, ease: "easeOut" }}
+      >
         <div className="text-center space-y-4">
           <img
             src="/ReviewPersonImg.png"
@@ -39,7 +51,7 @@ const ReviewSection = () => {
             people all across the Financial know.”
           </p>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
