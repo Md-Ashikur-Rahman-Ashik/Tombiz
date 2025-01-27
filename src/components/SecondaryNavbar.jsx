@@ -100,9 +100,11 @@ const SecondaryNavbar = ({ routeName }) => {
       )}
 
       {/* Breadcrumb Section */}
-      <div className="container mx-auto text-center py-8">
-        <h1 className="text-[#0A355A] text-2xl font-bold">{routeName}</h1>
-        <p className="text-[#6B7A89] text-sm mt-2">
+      <div className="container mx-auto text-center py-32">
+        <h1 className="text-[#08344E] md:text-[40px] text-2xl font-bold">
+          {routeName}
+        </h1>
+        <p className="text-[#08344E] text-lg mt-5">
           Home <span className="mx-1">›</span> {routeName}
         </p>
       </div>
