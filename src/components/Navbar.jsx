@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { RiArrowDropDownLine } from "react-icons/ri";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,13 +10,18 @@ const Navbar = () => {
       <div className="container mx-auto bg-white rounded-[20px] px-6 py-2 md:px-10 lg:px-20">
         <div className="flex justify-center gap-20 items-center">
           {/* Logo */}
-          <div className="text-[30px] font-bold text-[#08344E] flex items-center gap-[10px]">
-            <img
-              src="/TomBizLogo.svg"
-              alt="TomBiz Logo"
-              className="w-[40px] h-[40px]"
-            />
-            TomBiz
+          <div>
+            <Link
+              to={"/"}
+              className="text-[30px] font-bold text-[#08344E] flex items-center gap-[10px]"
+            >
+              <img
+                src="/TomBizLogo.svg"
+                alt="TomBiz Logo"
+                className="w-[40px] h-[40px]"
+              />
+              TomBiz
+            </Link>
           </div>
 
           {/* Desktop Links */}
@@ -75,7 +80,14 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <ul className="md:hidden mt-4 space-y-4 text-sm text-[#1A202C] font-medium">
-          <li className="hover:text-[#22C55E] transition">About Us</li>
+          <li>
+            <NavLink
+              to={"/about-us"}
+              className="hover:text-[#22C55E] transition"
+            >
+              About Us
+            </NavLink>
+          </li>
           <li className="hover:text-[#22C55E] transition">Services</li>
           <li className="hover:text-[#22C55E] transition">Blog</li>
           <li className="hover:text-[#22C55E] transition">Contact</li>
