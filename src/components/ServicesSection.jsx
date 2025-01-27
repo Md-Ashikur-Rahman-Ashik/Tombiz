@@ -1,4 +1,10 @@
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+
 const ServicesSection = () => {
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { amount: 0.5, once: false });
+
   const services = [
     {
       id: "01",
@@ -24,8 +30,19 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="py-16 px-4 lg:px-20">
-      <div className="text-center mb-12">
+    <section
+      ref={sectionRef}
+      className="py-16 px-4 lg:px-20"
+    >
+      <motion.div
+        className="text-center mb-12"
+        initial={{ opacity: 0, y: 50 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        transition={{
+          duration: 1.2,
+          ease: "easeOut",
+        }}
+      >
         <h2 className="uppercase font-bold text-[#08344E] mb-3">
           <span className="border text-[11.28px] py-[5px] px-[20px] rounded-[20px]">
             services
@@ -34,14 +51,24 @@ const ServicesSection = () => {
         <h2 className="text-[40px] font-bold flex flex-col">
           Customized Solutions for <span>Your Business</span>
         </h2>
-      </div>
+      </motion.div>
+
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {services.map((service, index) => (
-          <div
+          <motion.div
             key={service.id}
             className={`relative py-20 border-2 p-6 ${
-              index === 1 ? "border-[#93FF61] border-[5px] rounded-[20px]" : "border-transparent rounded-lg"
+              index === 1
+                ? "border-[#93FF61] border-[5px] rounded-[20px]"
+                : "border-transparent rounded-lg"
             } transition-transform duration-300 hover:scale-105`}
+            initial={{ opacity: 0, y: 50 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{
+              duration: 0.8,
+              ease: "easeOut",
+              delay: index * 0.3, // Cascading delay for each card
+            }}
           >
             <div className="absolute rounded-tl-[20px] rounded-br-[20px] -top-1 left-0 bg-[#93FF61] text-[#08344E] font-semibold text-[22px] px-4 py-2">
               {service.id}
@@ -55,7 +82,7 @@ const ServicesSection = () => {
               {service.title}
             </h3>
             <p className="text-sm text-gray-600">{service.description}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
