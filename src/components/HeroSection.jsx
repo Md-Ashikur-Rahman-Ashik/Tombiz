@@ -27,7 +27,7 @@ const HeroSection = () => {
               Business Consulting
             </span>
           </p>
-          <h1 className="md:text-[88.762px] text-5xl flex flex-col font-semibold text-[#08344E]">
+          <h1 className="lg:text-[88.762px] md:text-5xl text-3xl flex flex-col font-semibold text-[#08344E]">
             Transform Your <span>Business Potential</span>
           </h1>
         </div>
