@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { RiArrowDropDownLine } from "react-icons/ri";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,8 +21,13 @@ const Navbar = () => {
 
           {/* Desktop Links */}
           <ul className="hidden md:flex lg:space-x-8 md:space-x-4 text-[15px] text-[#1A202C] font-medium md:w-full lg:w-auto">
-            <li className="hover:text-[#22C55E] flex items-center transition">
-              About Us <RiArrowDropDownLine />
+            <li>
+              <NavLink
+                to={"/about-us"}
+                className="hover:text-[#22C55E] flex items-center transition"
+              >
+                About Us <RiArrowDropDownLine />
+              </NavLink>
             </li>
             <li className="hover:text-[#22C55E] flex items-center transition">
               Services <RiArrowDropDownLine />

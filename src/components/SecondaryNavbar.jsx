@@ -1,4 +1,6 @@
 import PropTypes from "prop-types";
+import { RiArrowDropDownLine } from "react-icons/ri";
+import { NavLink } from "react-router-dom";
 
 const SecondaryNavbar = ({ routeName }) => {
   return (
@@ -17,7 +19,12 @@ const SecondaryNavbar = ({ routeName }) => {
         {/* Navigation Links */}
         <ul className="hidden lg:flex space-x-8 text-[#0A355A] text-sm font-medium">
           <li className="relative group">
-            Home
+            <NavLink
+              to={"/"}
+              className="hover:text-[#22C55E] flex items-center transition"
+            >
+              Home <RiArrowDropDownLine />
+            </NavLink>
             <div className="absolute left-0 mt-2 hidden group-hover:block">
               <ul className="bg-white shadow-md p-2 rounded-lg">
                 <li className="py-1 px-3 hover:bg-gray-100">Submenu 1</li>
