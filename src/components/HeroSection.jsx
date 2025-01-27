@@ -3,36 +3,6 @@ import { AiOutlinePlayCircle } from "react-icons/ai";
 const HeroSection = () => {
   return (
     <section className="bg-[#F3FDF8] relative">
-      {/* Angled "Consult" Banners in Background */}
-      <div className="absolute inset-0 -z-10 overflow-hidden">
-        {/* Upper Row */}
-        <div className="absolute rotate-[-15deg] -translate-y-32 -translate-x-20 w-[200%]">
-          <div className="flex space-x-6">
-            {[...Array(6)].map((_, index) => (
-              <div
-                key={index}
-                className="flex items-center justify-center bg-green-200 text-black font-medium px-6 py-2 rounded-full shadow-md"
-              >
-                <span className="mr-2 text-xl">✨</span> Consult
-              </div>
-            ))}
-          </div>
-        </div>
-        {/* Lower Row */}
-        <div className="absolute rotate-[-15deg] translate-y-32 translate-x-20 w-[200%]">
-          <div className="flex space-x-6">
-            {[...Array(6)].map((_, index) => (
-              <div
-                key={index}
-                className="flex items-center justify-center bg-white text-black font-medium px-6 py-2 rounded-full shadow-md"
-              >
-                <span className="mr-2 text-xl">✨</span> Consult
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
       {/* Foreground Content */}
       <div className="max-w-7xl relative z-10 mx-auto px-6 sm:px-8">
         {/* Top Text */}
