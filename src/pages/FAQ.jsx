@@ -1,4 +1,5 @@
 import BrandSection from "../components/AboutUs/BrandSection";
+import FreeConsultation from "../components/ConsultationSection";
 import Accordion from "../components/FAQ/Accordion";
 
 const FAQ = () => {
@@ -6,6 +7,7 @@ const FAQ = () => {
     <>
       <Accordion />
       <BrandSection />
+      <FreeConsultation />
     </>
   );
 };
