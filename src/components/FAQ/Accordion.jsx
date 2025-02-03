@@ -58,7 +58,7 @@ export default function Accordion() {
       transition={{ duration: 0.6 }}
       className="max-w-4xl mx-auto py-10"
     >
-      <div className="container mx-auto mt-20 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="container mx-auto my-20 grid grid-cols-1 md:grid-cols-2 gap-8">
         {accordionData.map((item, index) => (
           <div
             key={index}
