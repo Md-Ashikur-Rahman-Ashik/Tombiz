@@ -46,8 +46,8 @@ const Navbar = () => {
           </ul>
 
           {/* "Read More" Button */}
-          <button className="hidden md:block md:w-1/5 lg:w-auto px-4 py-2 text-[15px] font-semibold bg-[#93FF61] text-[#08344E] rounded-lg shadow-md hover:shadow-lg transition hover:scale-105">
-            Read More
+          <button className="hidden md:block md:w-1/5 lg:w-auto px-4 py-2 text-[15px] font-semibold bg-[#93FF61] text-[#08344E] rounded-full shadow-md hover:shadow-lg transition hover:scale-105">
+            <Link to={"/faq"}>Read More</Link>
           </button>
 
           {/* Hamburger Menu */}
