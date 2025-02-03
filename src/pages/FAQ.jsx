@@ -1,9 +1,11 @@
+import Accordion from "../components/FAQ/Accordion";
+
 const FAQ = () => {
-    return (
-        <div>
-            
-        </div>
-    );
+  return (
+    <>
+      <Accordion />
+    </>
+  );
 };
 
 export default FAQ;
