@@ -1,9 +1,11 @@
+import SecondaryServicesSection from "../components/Services/ServicesSection";
+
 const Services = () => {
-    return (
-        <div>
-            
-        </div>
-    );
+  return (
+    <>
+      <SecondaryServicesSection />
+    </>
+  );
 };
 
 export default Services;
