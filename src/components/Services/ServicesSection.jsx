@@ -23,6 +23,27 @@ const SecondaryServicesSection = () => {
         "Our data handling practices, systems, and processes have been independently audited and certified.",
       imageSrc: "/FinancialManagementImg.jpeg", // Replace with actual image URL
     },
+    {
+      id: "04",
+      title: "Business Planner",
+      description:
+        "Our data handling practices, systems, and processes have been independently audited and certified.",
+      imageSrc: "/ConsultingTeam.jpeg", // Replace with actual image URL
+    },
+    {
+      id: "05",
+      title: "Financial management",
+      description:
+        "Our data handling practices, systems, and processes have been independently audited and certified.",
+      imageSrc: "/FinancialManagementImg.png", // Replace with actual image URL
+    },
+    {
+      id: "06",
+      title: "Financial management",
+      description:
+        "Our data handling practices, systems, and processes have been independently audited and certified.",
+      imageSrc: "/BusinessPlannerImg.jpeg", // Replace with actual image URL
+    },
   ];
 
   return (
@@ -47,14 +68,14 @@ const SecondaryServicesSection = () => {
             <div className="absolute rounded-tl-[20px] rounded-br-[20px] -top-1 left-0 bg-[#93FF61] text-[#08344E] font-semibold text-[22px] px-4 py-2">
               {service.id}
             </div>
+            <h3 className="text-center md:text-[35px] text-xl font-semibold text-[#08344E] mb-4">
+              {service.title}
+            </h3>
             <img
               src={service.imageSrc}
               alt={service.title}
               className="w-full h-40 object-cover rounded-lg mb-4"
             />
-            <h3 className="text-lg font-bold text-gray-800 mb-2">
-              {service.title}
-            </h3>
             <p className="text-sm text-gray-600">{service.description}</p>
           </div>
         ))}
