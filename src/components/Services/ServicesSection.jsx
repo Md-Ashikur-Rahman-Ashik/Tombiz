@@ -48,11 +48,11 @@ const SecondaryServicesSection = () => {
 
   return (
     <motion.section
-      className="py-16 px-4 lg:px-20"
-      style={{ minHeight: "100vh" }} // Ensure it's at least the height of the viewport
-      initial={{ opacity: 0 }}
+      className="py-16 px-4 lg:px-20 opacity-100 sm:opacity-0" // Ensure it's visible on mobile by default
+      style={{ minHeight: "100vh" }}
+      initial={{ opacity: window.innerWidth < 640 ? 1 : 0 }} // Prevent animation blocking on mobile
       whileInView={{ opacity: 1 }}
-      viewport={{ once: false, amount: 0.2 }} // Reset animation each time the section enters the viewport
+      viewport={{ once: false, amount: 0.2 }} // Reduce amount to trigger visibility sooner
       transition={{ duration: 1, ease: "easeInOut" }}
     >
       <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
