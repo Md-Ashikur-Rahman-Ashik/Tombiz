@@ -15,41 +15,47 @@ export default function ServiceOverview() {
 
   return (
     <motion.section
-      className="container mx-auto p-6 grid grid-cols-1 lg:grid-cols-2 gap-6 items-center"
+      className="container mx-auto my-10 p-6 flex md:flex-row flex-col gap-7"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: false, amount: 0.2 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
       {/* Image Section */}
-      <div className="w-full">
+      <div className="w-2/3">
         <img
-          src="/path-to-image/ServiceOverview.PNG"
+          src="/FinancialManagementImg.jpeg"
           alt="Service Overview"
           className="w-full h-auto rounded-lg shadow-lg"
         />
+        <h2 className="text-2xl md:text-[35px] my-10 font-semibold text-[#08344E]">
+          Service Overview
+        </h2>
+        <p className="text-[#72777D] text-[15px] font-medium my-5">
+          Aliquam eros justo, posuere loborti viverra lao ullamcorper posuere
+          viverra .Aliquam eros justo, posuere lobortis non, viverra laoreet
+          augue mattis start fermentum ullamcor viverra laoreet By Admin .
+          Creativity . 28th February 2022 . Leave a comment viverra laoreet
+          augue mattis start fermentum
+        </p>
+        <p className="text-[#72777D] text-[15px] font-medium">
+          Aliquam eros justo, posuere loborti viverra lao ullamcorper posuere
+          viverra .Aliquam eros justo, posuere lobortis non, viverra laoreet
+          augue mattis start fermentum ullamcor
+        </p>
+        <p className="font-semibold text-lg my-7 text-[#08344E]">
+          Aliquam eros justo, posuere loborti viverra lao ullamcorper posuere
+          viverra .Aliquam eros justo, posuere lobortis non, viverra laoreet
+        </p>
       </div>
 
       {/* Content Section */}
-      <div className="space-y-6">
-        <h2 className="text-2xl font-bold text-gray-900">Service Overview</h2>
-        <p className="text-gray-600">
-          Aliquam eros justo, posuere loborti viverra lao ullamcorper posuere
-          viverra. Aliquam eros justo, posuere lobortis non, viverra laoreet
-          augue mattis start fermentum ullamcor viverra laoreet.
-        </p>
-        <p className="text-gray-600">
-          Aliquam eros justo, posuere loborti viverra lao ullamcorper posuere
-          viverra. Aliquam eros justo, posuere lobortis non, viverra laoreet
-          augue mattis start fermentum ullamcor viverra laoreet.
-        </p>
-        <p className="font-bold text-gray-900">
-          Aliquam eros justo, posuere loborti viverra lao ullamcorper posuere
-          viverra.
-        </p>
+      <div className="space-y-6 w-1/3">
         {/* Service List */}
         <div className="space-y-2">
-          <h3 className="text-xl font-semibold text-gray-900">Service lists</h3>
+          <h3 className="text-xl md:text-[35px] font-semibold text-[#08344E]">
+            Service lists
+          </h3>
           <ul className="space-y-2">
             {serviceList.map((service, index) => (
               <li
