@@ -1,6 +1,12 @@
 import { motion } from "framer-motion";
 import { CiUser } from "react-icons/ci";
-import { FaArrowRight, FaRegComments, FaRegFolderOpen } from "react-icons/fa";
+import {
+  FaArrowRight,
+  FaRegComments,
+  FaRegFolderOpen,
+  FaSearch,
+} from "react-icons/fa";
+import { MdDoubleArrow } from "react-icons/md";
 
 const blogData = [
   {
@@ -104,49 +110,56 @@ const SecondaryBlog = () => {
         </div>
       </div>
       <aside className="lg:col-span-1 space-y-6">
-        <div className="bg-white p-6 shadow-lg rounded-lg">
-          <h3 className="text-xl font-bold mb-4">Search</h3>
-          <input
-            type="text"
-            placeholder="Enter search"
-            className="w-full p-2 border rounded-md"
-          />
+        <div className="bg-white p-6 border rounded-xl">
+          <span className="text-[22px] text-[#08344E] font-semibold pb-2 border-b border-[#08344E]">
+            Search
+          </span>
+          <div className="flex items-center mt-8">
+            <input
+              type="text"
+              placeholder="Enter search"
+              className="w-full p-4 border-2 focus:outline-none rounded-full"
+            />
+            <FaSearch className="-ml-14 rounded-r-3xl bg-[#93FF61] w-14 h-14 p-4" />
+          </div>
         </div>
-        <div className="bg-white p-6 shadow-lg rounded-lg">
-          <h3 className="text-xl font-bold mb-4">Category</h3>
-          <ul className="space-y-2">
-            <li className="text-gray-600 hover:text-gray-900 cursor-pointer">
-              Blog (1)
+        <div className="bg-white p-6 border rounded-xl">
+          <span className="text-[22px] text-[#08344E] font-semibold pb-2 border-b border-[#08344E]">
+            Category
+          </span>
+          <ul className="space-y-2 mt-8 text-[15px] text-[#08344E] font-medium">
+            <li className="cursor-pointer flex items-center gap-2">
+              <MdDoubleArrow /> Blog (1)
             </li>
-            <li className="text-gray-600 hover:text-gray-900 cursor-pointer">
-              AI-Generated
+            <li className="cursor-pointer flex items-center gap-2">
+              <MdDoubleArrow /> AI-Generated
             </li>
-            <li className="text-gray-600 hover:text-gray-900 cursor-pointer">
-              Featured (6)
+            <li className="cursor-pointer flex items-center gap-2">
+              <MdDoubleArrow /> Featured (6)
             </li>
-            <li className="text-gray-600 hover:text-gray-900 cursor-pointer">
-              Business (8)
+            <li className="cursor-pointer flex items-center gap-2">
+              <MdDoubleArrow /> Business (8)
             </li>
-            <li className="text-gray-600 hover:text-gray-900 cursor-pointer">
-              News (4)
+            <li className="cursor-pointer flex items-center gap-2">
+              <MdDoubleArrow /> News (4)
             </li>
-            <li className="text-gray-600 hover:text-gray-900 cursor-pointer">
-              Ideas (7)
+            <li className="cursor-pointer flex items-center gap-2">
+              <MdDoubleArrow /> Ideas (7)
             </li>
-            <li className="text-gray-600 hover:text-gray-900 cursor-pointer">
-              Post Types (6)
+            <li className="cursor-pointer flex items-center gap-2">
+              <MdDoubleArrow /> Post Types (6)
             </li>
-            <li className="text-gray-600 hover:text-gray-900 cursor-pointer">
-              Top Rated (2)
+            <li className="cursor-pointer flex items-center gap-2">
+              <MdDoubleArrow /> Top Rated (2)
             </li>
-            <li className="text-gray-600 hover:text-gray-900 cursor-pointer">
-              Trends (5)
+            <li className="cursor-pointer flex items-center gap-2">
+              <MdDoubleArrow /> Trends (5)
             </li>
-            <li className="text-gray-600 hover:text-gray-900 cursor-pointer">
-              Style (9)
+            <li className="cursor-pointer flex items-center gap-2">
+              <MdDoubleArrow /> Style (9)
             </li>
-            <li className="text-gray-600 hover:text-gray-900 cursor-pointer">
-              Technology (6)
+            <li className="cursor-pointer flex items-center gap-2">
+              <MdDoubleArrow /> Technology (6)
             </li>
           </ul>
         </div>
