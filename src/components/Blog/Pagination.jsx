@@ -2,7 +2,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 const Pagination = () => {
   return (
-    <div className="container mx-auto flex justify-center mt-10 space-x-5">
+    <div className="container mx-auto flex justify-center my-10 space-x-5">
       <button className="min-w-9 rounded-full py-4 px-6 border border-slate-300 text-center text-[15px] font-medium text-[#08344E] transition-all shadow-md hover:shadow-lg hover:bg-[#93FF61] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2">
         01
       </button>
