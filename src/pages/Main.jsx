@@ -28,6 +28,10 @@ const Main = () => {
     routeName = "Service Details";
   }
 
+  if (location.pathname === "/blog") {
+    routeName = "Blog";
+  }
+
   return (
     <>
       {isHomePage ? <Navbar /> : <SecondaryNavbar routeName={routeName} />}
