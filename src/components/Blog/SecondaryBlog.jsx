@@ -61,16 +61,47 @@ const blogData = [
   },
 ];
 
+const newsItems = [
+  {
+    date: "Dec 12, 2024",
+    title: "Experience innovation the with consulting",
+    image: "/NewsImg1.png",
+  },
+  {
+    date: "Dec 12, 2024",
+    title: "Say goodbye traditional consulting",
+    image: "/NewsImg2.png",
+  },
+  {
+    date: "Dec 12, 2024",
+    title: "Streamline your the an consulting",
+    image: "/NewsImg3.png",
+  },
+];
+
+const tags = [
+  "All Project",
+  "Automac",
+  "saas Tech",
+  "Mobile saas",
+  "ServicePro",
+];
+
+const fadeInVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+};
+
 const SecondaryBlog = () => {
   return (
     <motion.section
-      className="container mx-auto px-4 py-12 grid grid-cols-1 lg:grid-cols-3 gap-8"
+      className="container mx-auto px-4 py-12 flex lg:flex-row flex-col-reverse gap-8"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       viewport={{ once: false }}
     >
-      <div className="lg:col-span-2">
+      <div className="lg:col-span-2 lg:w-4/5">
         <div className="flex flex-col space-y-8">
           {blogData.map((blog) => (
             <motion.div
@@ -83,7 +114,7 @@ const SecondaryBlog = () => {
                 alt={blog.title}
                 className="w-full h-96 object-cover rounded-md mb-4"
               />
-              <div className="flex items-center text-gray-500 text-sm space-x-4 mb-2">
+              <div className="flex md:flex-row flex-col md:items-center text-gray-500 text-sm md:space-x-4 mb-2">
                 <span className="flex items-center gap-1">
                   <CiUser /> {blog.author}
                 </span>
@@ -94,14 +125,14 @@ const SecondaryBlog = () => {
                   <FaRegComments /> {`Comments (${blog.comments})`}
                 </span>
               </div>
-              <h3 className="text-xl md:text-[35px] leading-10 text-[#08344E] font-semibold mb-4">
+              <h3 className="text-xl md:text-[35px] md:leading-10 text-[#08344E] font-semibold mb-4">
                 {blog.title}
               </h3>
               <p className="text-[#08344E] text-[15px] font-medium mb-4">
                 {blog.description}
               </p>
               <div>
-                <button className="hidden lg:flex gap-2 items-center text-[#08344E] border border-[#08344E] py-5 px-7 rounded-full text-[15px] font-semibold hover:bg-[#08426a] hover:text-white transition font-inter">
+                <button className="flex gap-2 items-center text-[#08344E] border border-[#08344E] md:py-5 py-2 px-7 rounded-full text-[15px] font-semibold hover:bg-[#08426a] hover:text-white transition font-inter">
                   Read More <FaArrowRight />
                 </button>
               </div>
@@ -163,6 +194,61 @@ const SecondaryBlog = () => {
             </li>
           </ul>
         </div>
+        <motion.section
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.3 }}
+          className="space-y-6 mx-auto"
+        >
+          <motion.div
+            variants={fadeInVariants}
+            className="bg-white p-4 border rounded-xl"
+          >
+            <span className="text-[22px] text-[#08344E] font-semibold pb-2 border-b border-[#08344E]">
+              Recent News
+            </span>
+            <div className="space-y-4 mt-4">
+              {newsItems.map((item, index) => (
+                <motion.div
+                  key={index}
+                  variants={fadeInVariants}
+                  className="flex items-center gap-4 p-3 rounded-lg hover:bg-gray-100 transition"
+                >
+                  <img
+                    src={item.image}
+                    alt="News"
+                    className="w-16 h-16 rounded-lg object-cover"
+                  />
+                  <div>
+                    <p className="text-xs text-[#72777D]">{item.date}</p>
+                    <p className="text-lg font-semibold text-[#08344E]">
+                      {item.title}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div
+            variants={fadeInVariants}
+            className="bg-white p-4 border rounded-xl"
+          >
+            <span className="text-[22px] text-[#08344E] font-semibold pb-2 border-b border-[#08344E]">
+              Tags
+            </span>
+            <div className="flex flex-wrap gap-2 mt-8">
+              {tags.map((tag, index) => (
+                <span
+                  key={index}
+                  className="px-3 py-1 text-[15px] font-medium text-[#08344E] border rounded-full hover:bg-gray-200 transition"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </motion.div>
+        </motion.section>
       </aside>
     </motion.section>
   );
