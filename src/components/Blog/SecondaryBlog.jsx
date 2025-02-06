@@ -1,96 +1,156 @@
 import { motion } from "framer-motion";
+import { CiUser } from "react-icons/ci";
+import { FaArrowRight, FaRegComments, FaRegFolderOpen } from "react-icons/fa";
 
 const blogData = [
   {
     id: 1,
     title: "A mindfulness companion that offers guided Consulting Business",
     description:
-      "Miquam eros justo, posuere loborti viverra lao ullamcorper posuere viverra.",
-    date: "29th February 2022",
+      "Miquam eros justo, posuere loborti viverra lao ullamcorper posuere viverra .Aliquam eros justo, posuere lobortis in non, viverra laoreet augue mattis start fermentum ullamcor viverra laoreet By Admin . Creativity . 29th Februarym 2022 . Leave a comment viverra laoreet augue mattis start fermentum ",
     author: "By Admin",
-    category: "Creativity",
+    category: "Category",
     comments: "05",
-    image: "image1.jpg",
+    image: "/ProvenImg3.jpeg",
   },
   {
     id: 2,
-    title: "Effective strategies for growing your business in 2025",
+    title: "A mindfulness companion that offers guided Consulting Business",
     description:
-      "Learn key techniques to scale and sustain your business with expert insights.",
-    date: "15th January 2025",
-    author: "By John Doe",
-    category: "Business",
+      "Miquam eros justo, posuere loborti viverra lao ullamcorper posuere viverra .Aliquam eros justo, posuere lobortis in non, viverra laoreet augue mattis start fermentum ullamcor viverra laoreet By Admin . Creativity . 29th Februarym 2022 . Leave a comment viverra laoreet augue mattis start fermentum ",
+    author: "By Admin",
+    category: "Category",
     comments: "12",
-    image: "image2.jpg",
+    image: "/BusinessPlannerImg.jpeg",
   },
   {
     id: 3,
-    title: "Harnessing AI for smarter business decisions",
+    title: "Building Stronger Opportunity Businesses Together",
     description:
-      "How artificial intelligence is transforming decision-making in the corporate world.",
-    date: "10th December 2024",
-    author: "By AI Expert",
-    category: "Technology",
+      "Miquam eros justo, posuere loborti viverra lao ullamcorper posuere viverra .Aliquam eros justo, posuere lobortis in non, viverra laoreet augue mattis start fermentum ullamcor viverra laoreet By Admin . Creativity . 29th Februarym 2022 . Leave a comment viverra laoreet augue mattis start fermentum ",
+    author: "By Admin",
+    category: "Category",
     comments: "08",
-    image: "image3.jpg",
+    image: "/TeamWork.jpeg",
   },
   {
     id: 4,
-    title: "The future of remote work and digital nomad lifestyle",
+    title: "Transforming Challenges into Opportunities",
     description:
-      "What to expect in the evolving landscape of remote jobs and freelancing.",
-    date: "5th November 2024",
-    author: "By Digital Nomad",
-    category: "Trends",
+      "Miquam eros justo, posuere loborti viverra lao ullamcorper posuere viverra .Aliquam eros justo, posuere lobortis in non, viverra laoreet augue mattis start fermentum ullamcor viverra laoreet By Admin . Creativity . 29th Februarym 2022 . Leave a comment viverra laoreet augue mattis start fermentum ",
+    author: "By Admin",
+    category: "Category",
     comments: "09",
-    image: "image4.jpg",
+    image: "/SuccessStoryImg2.png",
   },
   {
     id: 5,
-    title: "Building a strong personal brand in the digital age",
+    title: "Strategic Insights Challenges Lasting Success",
     description:
-      "Essential tips on establishing credibility and growing your online presence.",
-    date: "20th October 2024",
-    author: "By Branding Guru",
-    category: "Marketing",
+      "Miquam eros justo, posuere loborti viverra lao ullamcorper posuere viverra .Aliquam eros justo, posuere lobortis in non, viverra laoreet augue mattis start fermentum ullamcor viverra laoreet By Admin . Creativity . 29th Februarym 2022 . Leave a comment viverra laoreet augue mattis start fermentum ",
+    author: "By Admin",
+    category: "Category",
     comments: "14",
-    image: "image5.jpg",
+    image: "/TeamWork2.png",
   },
 ];
 
 const SecondaryBlog = () => {
   return (
     <motion.section
-      className="container mx-auto px-4 py-12"
+      className="container mx-auto px-4 py-12 grid grid-cols-1 lg:grid-cols-3 gap-8"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       viewport={{ once: false }}
     >
-      <h2 className="text-3xl font-bold mb-8 text-center">Latest Blogs</h2>
-      <div className="flex flex-col space-y-8">
-        {blogData.map((blog) => (
-          <motion.div
-            key={blog.id}
-            className="bg-white shadow-lg rounded-lg overflow-hidden p-6"
-            whileHover={{ scale: 1.02 }}
-          >
-            <img
-              src={blog.image}
-              alt={blog.title}
-              className="w-full h-64 object-cover rounded-md mb-4"
-            />
-            <div className="flex items-center text-gray-500 text-sm space-x-4 mb-2">
-              <span>{blog.author}</span>
-              <span>{blog.category}</span>
-              <span>{`Comments (${blog.comments})`}</span>
-            </div>
-            <h3 className="text-xl font-semibold mb-2">{blog.title}</h3>
-            <p className="text-gray-600 mb-4">{blog.description}</p>
-            <div className="text-sm text-gray-400">{blog.date}</div>
-          </motion.div>
-        ))}
+      <div className="lg:col-span-2">
+        <div className="flex flex-col space-y-8">
+          {blogData.map((blog) => (
+            <motion.div
+              key={blog.id}
+              className="bg-white shadow-lg rounded-lg overflow-hidden p-6"
+              whileHover={{ scale: 1.02 }}
+            >
+              <img
+                src={blog.image}
+                alt={blog.title}
+                className="w-full h-96 object-cover rounded-md mb-4"
+              />
+              <div className="flex items-center text-gray-500 text-sm space-x-4 mb-2">
+                <span className="flex items-center gap-1">
+                  <CiUser /> {blog.author}
+                </span>
+                <span className="flex items-center gap-1">
+                  <FaRegFolderOpen /> {blog.category}
+                </span>
+                <span className="flex items-center gap-1">
+                  <FaRegComments /> {`Comments (${blog.comments})`}
+                </span>
+              </div>
+              <h3 className="text-xl md:text-[35px] leading-10 text-[#08344E] font-semibold mb-4">
+                {blog.title}
+              </h3>
+              <p className="text-[#08344E] text-[15px] font-medium mb-4">
+                {blog.description}
+              </p>
+              <div>
+                <button className="hidden lg:flex gap-2 items-center text-[#08344E] border border-[#08344E] py-5 px-7 rounded-full text-[15px] font-semibold hover:bg-[#08426a] hover:text-white transition font-inter">
+                  Read More <FaArrowRight />
+                </button>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
+      <aside className="lg:col-span-1 space-y-6">
+        <div className="bg-white p-6 shadow-lg rounded-lg">
+          <h3 className="text-xl font-bold mb-4">Search</h3>
+          <input
+            type="text"
+            placeholder="Enter search"
+            className="w-full p-2 border rounded-md"
+          />
+        </div>
+        <div className="bg-white p-6 shadow-lg rounded-lg">
+          <h3 className="text-xl font-bold mb-4">Category</h3>
+          <ul className="space-y-2">
+            <li className="text-gray-600 hover:text-gray-900 cursor-pointer">
+              Blog (1)
+            </li>
+            <li className="text-gray-600 hover:text-gray-900 cursor-pointer">
+              AI-Generated
+            </li>
+            <li className="text-gray-600 hover:text-gray-900 cursor-pointer">
+              Featured (6)
+            </li>
+            <li className="text-gray-600 hover:text-gray-900 cursor-pointer">
+              Business (8)
+            </li>
+            <li className="text-gray-600 hover:text-gray-900 cursor-pointer">
+              News (4)
+            </li>
+            <li className="text-gray-600 hover:text-gray-900 cursor-pointer">
+              Ideas (7)
+            </li>
+            <li className="text-gray-600 hover:text-gray-900 cursor-pointer">
+              Post Types (6)
+            </li>
+            <li className="text-gray-600 hover:text-gray-900 cursor-pointer">
+              Top Rated (2)
+            </li>
+            <li className="text-gray-600 hover:text-gray-900 cursor-pointer">
+              Trends (5)
+            </li>
+            <li className="text-gray-600 hover:text-gray-900 cursor-pointer">
+              Style (9)
+            </li>
+            <li className="text-gray-600 hover:text-gray-900 cursor-pointer">
+              Technology (6)
+            </li>
+          </ul>
+        </div>
+      </aside>
     </motion.section>
   );
 };
