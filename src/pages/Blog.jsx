@@ -1,9 +1,11 @@
+import SecondaryBlog from "../components/Blog/SecondaryBlog";
+
 const Blog = () => {
-    return (
-        <div>
-            
-        </div>
-    );
+  return (
+    <>
+      <SecondaryBlog />
+    </>
+  );
 };
 
 export default Blog;
