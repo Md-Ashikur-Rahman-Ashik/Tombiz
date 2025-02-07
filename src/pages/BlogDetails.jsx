@@ -1,9 +1,11 @@
+import EmbraceSection from "../components/BlogDetails/EmbraceSection";
+
 const BlogDetails = () => {
-    return (
-        <div>
-            
-        </div>
-    );
+  return (
+    <>
+      <EmbraceSection />
+    </>
+  );
 };
 
 export default BlogDetails;
