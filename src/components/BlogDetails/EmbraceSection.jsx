@@ -43,7 +43,7 @@ const EmbraceSection = () => {
       whileInView={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 50 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      viewport={{ once: false, amount: 0.2 }}
+      viewport={{ once: false, amount: 0.1 }} // Reduced amount for mobile triggers
       className="container mx-auto px-4 py-10 md:py-16 lg:py-20"
     >
       <div className="flex lg:flex-row flex-col-reverse gap-8">
@@ -87,7 +87,7 @@ const EmbraceSection = () => {
             viewport={{ once: false }}
           >
             <div className="mx-auto">
-              <div className="py-6 px-14 rounded-[15px] border">
+              <div className="py-6 md:px-14 px-2 rounded-[15px] border">
                 <p className="text-xl text-[#08344E] text-left">
                   {`With a commitment to driving technological evolution, our IT solutions and a desigm services are the cornerstone of your digital progression. We to not  a transcend boundariesi enabling businesses`}
                 </p>
@@ -110,7 +110,7 @@ const EmbraceSection = () => {
               <h2 className="mt-12 text-2xl md:text-[35px] font-bold text-[#08344E]">
                 Revolutionize Your Business with Consult
               </h2>
-              <p className="mt-7 text-left text-[#72777D]  font-medium text-[15px]">
+              <p className="mt-7 md:text-left text-[#72777D]  font-medium text-[15px]">
                 Aliquam eros justo, posuere loborti viverra laoreet matti
                 ullamcorper posuere viverra .Aliquam eros just posuere lobortis,
                 viverra laoreet augue mattis fermentum ullamcorper viverra
