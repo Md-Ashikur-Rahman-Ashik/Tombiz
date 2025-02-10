@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { CiUser } from "react-icons/ci";
 import { FaRegComments, FaRegFolderOpen } from "react-icons/fa";
 import Revolution from "./Revolution";
@@ -8,20 +7,19 @@ import LeaveAComment from "./LeaveAComment";
 
 const EmbraceSection = () => {
   return (
-    <motion.section
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: 50 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-      viewport={{ once: false, amount: 0.1 }} // Reduced amount for mobile triggers
+    <section
       className="container mx-auto px-4 py-10 md:py-16 lg:py-20"
+      // initial={{ opacity: 0, y: 30 }} // Reduce y movement
+      // whileInView={{ opacity: 1, y: 0 }}
+      // transition={{ duration: 0.8, ease: "easeOut" }}
+      // viewport={{ once: false, amount: 0.3 }}
     >
       <div className="flex lg:flex-row flex-col-reverse gap-8">
-        <div className="mx-auto text-center lg:w-2/3">
+        <div className="mx-auto text-center lg:w-2/3 w-full">
           <img
             src="/BlogDetails.jpeg"
             alt="Consulting Business"
-            className="w-full h-96 object-cover rounded-md mb-4"
+            className="w-full h-auto object-cover rounded-md mb-4"
           />
           <div className="flex md:flex-row flex-col md:items-center text-gray-500 text-sm md:space-x-4 mb-5">
             <span className="flex items-center gap-1">
@@ -41,11 +39,6 @@ const EmbraceSection = () => {
             Aliquam eros justo, posuere loborti viverra laoreet matti
             ullamcorper posuere viverra .Aliquam eros just posuere lobortis,
             viverra laoreet augue mattis fermentum ullamcorper viverra laoreet
-            Aliquam eros justo, posuere loborti viverra laoreet matti
-            ullamcorper posuere viverra .Aliquam eros justo, posuere lobortis
-            non, viverra laoree augue mattis.Aliquam eros justo, posuere loborti
-            viverra laoreet matti ullamcorper posuere viverra .Aliquam eros
-            justo posuere lobortis, viverra laoreet augue mattis fermentum
           </p>
 
           {/* Second Section */}
@@ -59,9 +52,9 @@ const EmbraceSection = () => {
         </div>
 
         {/* Right side section */}
-        <Aside />
+        <Aside className="lg:w-1/3 w-full" />
       </div>
-    </motion.section>
+    </section>
   );
 };
 

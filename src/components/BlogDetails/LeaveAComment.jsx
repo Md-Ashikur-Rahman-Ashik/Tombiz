@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
 
 const LeaveAComment = () => {
@@ -35,12 +34,12 @@ const LeaveAComment = () => {
   };
 
   return (
-    <motion.section
+    <section
       className="w-full container mx-auto p-6 text-left"
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-      viewport={{ once: false }}
+      // initial={{ opacity: 0, y: 30 }} // Reduce y movement
+      // whileInView={{ opacity: 1, y: 0 }}
+      // transition={{ duration: 0.8, ease: "easeOut" }}
+      // viewport={{ once: false, amount: 0.3 }}
     >
       <h2 className="text-3xl md:text-[40px] font-bold text-[#08344E]">
         Leave a comment
@@ -92,15 +91,15 @@ const LeaveAComment = () => {
             <p className="text-red-500 text-sm mt-1">{errors.message}</p>
           )}
         </div>
-        <motion.button
+        <button
           type="submit"
           className="flex items-center gap-2 px-6 py-3 bg-[#93FF61] hover:text-white rounded-full font-semibold hover:bg-green-500 transition text-[#08344E]"
-          whileTap={{ scale: 0.9 }}
+          // whileTap={{ scale: 0.9 }}
         >
           Submit Now <FaArrowRight />
-        </motion.button>
+        </button>
       </form>
-    </motion.section>
+    </section>
   );
 };
 
