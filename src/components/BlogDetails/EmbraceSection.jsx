@@ -4,6 +4,7 @@ import { FaRegComments, FaRegFolderOpen } from "react-icons/fa";
 import Revolution from "./Revolution";
 import Comment from "./Comment";
 import Aside from "./Aside";
+import LeaveAComment from "./LeaveAComment";
 
 const EmbraceSection = () => {
   return (
@@ -52,6 +53,9 @@ const EmbraceSection = () => {
 
           {/* Third Section */}
           <Comment />
+
+          {/* Leave a comment section */}
+          <LeaveAComment />
         </div>
 
         {/* Right side section */}
