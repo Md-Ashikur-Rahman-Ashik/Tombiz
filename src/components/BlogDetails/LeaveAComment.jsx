@@ -35,7 +35,7 @@ const LeaveAComment = () => {
 
   return (
     <section
-      className="w-full container mx-auto p-6 text-left"
+      className="w-full container mx-auto md:p-6 text-left"
       // initial={{ opacity: 0, y: 30 }} // Reduce y movement
       // whileInView={{ opacity: 1, y: 0 }}
       // transition={{ duration: 0.8, ease: "easeOut" }}
