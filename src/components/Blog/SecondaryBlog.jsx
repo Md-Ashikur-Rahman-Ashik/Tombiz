@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { CiUser } from "react-icons/ci";
 import { FaArrowRight, FaRegComments, FaRegFolderOpen } from "react-icons/fa";
 import AsideSection from "./AsideSection";
+import { Link } from "react-router-dom";
 
 const blogData = [
   {
@@ -96,8 +97,11 @@ const SecondaryBlog = () => {
                 {blog.description}
               </p>
               <div>
-                <button className="flex gap-2 items-center text-[#08344E] border border-[#08344E] md:py-5 py-2 px-7 rounded-full text-[15px] font-semibold hover:bg-[#08426a] hover:text-white transition font-inter">
-                  Read More <FaArrowRight />
+                <button
+                  to={"/blog-details"}
+                  className="flex gap-2 items-center text-[#08344E] border border-[#08344E] md:py-5 py-2 px-7 rounded-full text-[15px] font-semibold hover:bg-[#08426a] hover:text-white transition font-inter"
+                >
+                  <Link to={"/blog-details"}>Read More</Link> <FaArrowRight />
                 </button>
               </div>
             </motion.div>

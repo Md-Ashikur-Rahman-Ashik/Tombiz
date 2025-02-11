@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const SecondaryServicesSection = () => {
   const services = [
@@ -55,7 +56,10 @@ const SecondaryServicesSection = () => {
       viewport={{ once: false, amount: 0.2 }} // Reduce amount to trigger visibility sooner
       transition={{ duration: 1, ease: "easeInOut" }}
     >
-      <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <Link
+        to={"/service-details"}
+        className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+      >
         {services.map((service, index) => (
           <div
             key={service.id}
@@ -79,7 +83,7 @@ const SecondaryServicesSection = () => {
             <p className="text-sm text-gray-600">{service.description}</p>
           </div>
         ))}
-      </div>
+      </Link>
     </motion.section>
   );
 };
