@@ -1,9 +1,11 @@
+import GetInTouch from "../components/Contact/GetInTouch";
+
 const Contact = () => {
-    return (
-        <div>
-            
-        </div>
-    );
+  return (
+    <>
+      <GetInTouch />
+    </>
+  );
 };
 
 export default Contact;
