@@ -42,11 +42,21 @@ const Navbar = () => {
                 Services <RiArrowDropDownLine />
               </NavLink>
             </li>
-            <li className="hover:text-[#22C55E] flex items-center transition">
-              Blog <RiArrowDropDownLine />
+            <li>
+              <NavLink
+                to={"/blog"}
+                className="hover:text-[#22C55E] flex items-center transition"
+              >
+                Blog <RiArrowDropDownLine />
+              </NavLink>
             </li>
-            <li className="hover:text-[#22C55E] flex items-center transition">
-              Contact <RiArrowDropDownLine />
+            <li>
+              <NavLink
+                to={"/contact"}
+                className="hover:text-[#22C55E] flex items-center transition"
+              >
+                Contact <RiArrowDropDownLine />
+              </NavLink>
             </li>
           </ul>
 
@@ -101,8 +111,22 @@ const Navbar = () => {
               Services <RiArrowDropDownLine />
             </NavLink>
           </li>
-          <li className="hover:text-[#22C55E] transition">Blog</li>
-          <li className="hover:text-[#22C55E] transition">Contact</li>
+          <li className="hover:text-[#22C55E] transition">
+            <NavLink
+              to={"/blog"}
+              className="hover:text-[#22C55E] flex items-center transition"
+            >
+              Blog <RiArrowDropDownLine />
+            </NavLink>
+          </li>
+          <li className="hover:text-[#22C55E] transition">
+            <NavLink
+              to={"/contact"}
+              className="hover:text-[#22C55E] flex items-center transition"
+            >
+              Contact <RiArrowDropDownLine />
+            </NavLink>
+          </li>
         </ul>
       )}
     </nav>

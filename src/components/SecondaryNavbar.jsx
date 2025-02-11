@@ -48,11 +48,66 @@ const SecondaryNavbar = ({ routeName }) => {
               About Us <RiArrowDropDownLine />
             </NavLink>
           </li>
-          <li>Services</li>
-          <li>Projects</li>
-          <li>Blog</li>
-          <li>Page</li>
-          <li>Contact</li>
+          <li>
+            <NavLink
+              to={"/services"}
+              className={({ isActive }) =>
+                `hover:text-[#22C55E] flex items-center transition ${
+                  isActive ? "font-bold text-[#22C55E]" : ""
+                }`
+              }
+            >
+              Services <RiArrowDropDownLine />
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to={"/"}
+              className={({ isActive }) =>
+                `hover:text-[#22C55E] flex items-center transition ${
+                  isActive ? "font-bold text-[#22C55E]" : ""
+                }`
+              }
+            >
+              Projects <RiArrowDropDownLine />
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to={"/blog"}
+              className={({ isActive }) =>
+                `hover:text-[#22C55E] flex items-center transition ${
+                  isActive ? "font-bold text-[#22C55E]" : ""
+                }`
+              }
+            >
+              Blog <RiArrowDropDownLine />
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to={"/"}
+              className={({ isActive }) =>
+                `hover:text-[#22C55E] flex items-center transition ${
+                  isActive ? "font-bold text-[#22C55E]" : ""
+                }`
+              }
+            >
+              Page <RiArrowDropDownLine />
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to={"/contact"}
+              className={({ isActive }) =>
+                `hover:text-[#22C55E] flex items-center transition ${
+                  isActive ? "font-bold text-[#22C55E]" : ""
+                }`
+              }
+            >
+              Contact <RiArrowDropDownLine />
+            </NavLink>
+          </li>
         </ul>
 
         {/* Get a Quote Button */}
@@ -91,11 +146,66 @@ const SecondaryNavbar = ({ routeName }) => {
               About Us
             </NavLink>
           </li>
-          <li>Services</li>
-          <li>Projects</li>
-          <li>Blog</li>
-          <li>Page</li>
-          <li>Contact</li>
+          <li>
+            <NavLink
+              to={"/services"}
+              className={({ isActive }) =>
+                `hover:text-[#22C55E] flex items-center transition ${
+                  isActive ? "font-bold text-[#22C55E]" : ""
+                }`
+              }
+            >
+              Services <RiArrowDropDownLine />
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to={"/"}
+              className={({ isActive }) =>
+                `hover:text-[#22C55E] flex items-center transition ${
+                  isActive ? "font-bold text-[#22C55E]" : ""
+                }`
+              }
+            >
+              Projects <RiArrowDropDownLine />
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to={"/blog"}
+              className={({ isActive }) =>
+                `hover:text-[#22C55E] flex items-center transition ${
+                  isActive ? "font-bold text-[#22C55E]" : ""
+                }`
+              }
+            >
+              Blog <RiArrowDropDownLine />
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to={"/"}
+              className={({ isActive }) =>
+                `hover:text-[#22C55E] flex items-center transition ${
+                  isActive ? "font-bold text-[#22C55E]" : ""
+                }`
+              }
+            >
+              Page <RiArrowDropDownLine />
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to={"/contact"}
+              className={({ isActive }) =>
+                `hover:text-[#22C55E] flex items-center transition ${
+                  isActive ? "font-bold text-[#22C55E]" : ""
+                }`
+              }
+            >
+              Contact <RiArrowDropDownLine />
+            </NavLink>
+          </li>
         </ul>
       )}
 
